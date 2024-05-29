@@ -4,6 +4,16 @@ const firstName = document.querySelector('.firstName');
 const lastName = document.querySelector('.lastName');
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
+const underInput = document.querySelector('.underInput')
+const firstNameUnderInput = document.querySelector('.firstName + .under .underInput')
+const lastNameUnderInput = document.querySelector('.lastName + .under .underInput')
+const emailUnderInput = document.querySelector('.email + .under .underInput')
+const passwordUnderInput = document.querySelector('.password + .under .underInput')
+const under = document.querySelector('.under')
+const lasdtunder = document.querySelector('.under')
+const firstNameunder = document.querySelector('.firstName + .under')
+const under = document.querySelector('.under')
+const under = document.querySelector('.under')
 
 console.log(firstName);
 
@@ -20,6 +30,19 @@ form.addEventListener('submit', (e) => {
   // Check first name
   if (fName === '') {
     firstName.classList.add('error');
+    firstName.style.border = "2.5px solid var(--red)"
+    firstName.style.opacity = "0.7"
+    firstNameUnderInput.textContent = "First Name cannot be empty"
+    firstNameunder.style.display = "flex"
+    firstNameUnderInput.style.color = "var(--red)"
+    firstNameUnderInput.style.fontSize = "12px"
+    firstNameUnderInput.style.opacity = "0.8"
+    under.style.padding = "4px 0 20px 0px"
+    firstName.style.margin = "0 0 0px 0px"
+    firstNameunder.style.justifyContent = "right"
+    firstNameunder.style.width = "100%"
+    firstName.placeholder = ''
+
   } else {
     firstName.classList.remove('error');
   }
@@ -27,6 +50,18 @@ form.addEventListener('submit', (e) => {
 
   if (lName === '') {
     lastName.classList.add('error');
+    lastName.style.border = "2.5px solid var(--red)"
+    lastName.style.opacity = "0.7"
+    lastNameUnderInput.textContent = "Last Name cannot be empty"
+    lastNameunder.style.display = "flex"
+    lastNameUnderInput.style.color = "var(--red)"
+    lastNameUnderInput.style.fontSize = "12px"
+    lastNameUnderInput.style.opacity = "0.8"
+    lastNameunder.style.padding = "4px 0 20px 0px"
+    lastName.style.margin = "0 0 0px 0px"
+    lastNameunder.style.justifyContent = "right"
+    lastNameunder.style.width = "100%"
+    lastName.placeholder = ''
   } else {
     lastName.classList.remove('error');
   }
@@ -34,6 +69,22 @@ form.addEventListener('submit', (e) => {
 
   if (!validateEmail(emailVal) || emailVal === '') {
     email.classList.add('error');
+    email.style.border = "2.5px solid var(--red)"
+    email.style.opacity = "0.7"
+    emailUnderInput.textContent = "Looks like this is not an email"
+    emailunder.style.display = "flex"
+    emailUnderInput.style.color = "var(--red)"
+    emailUnderInput.style.fontSize = "12px"
+    emailUnderInput.style.opacity = "0.8"
+    emailunder.style.padding = "4px 0 20px 0px"
+    email.style.margin = "0 0 0px 0px"
+    emailunder.style.justifyContent = "right"
+    emailunder.style.width = "100%"
+    email.placeholder = 'email@example/com'
+
+      email.style.setProperty( "--placeholder-color", "var(--red)");
+      console.log(email.getAttribute("placeholder") )
+
   } else {
     email.classList.remove('error');
   }
@@ -42,8 +93,22 @@ form.addEventListener('submit', (e) => {
 
   if (passwordVal === '') {
     password.classList.add('error');
+    password.placeholder = ''
+    password.style.border = "2.5px solid var(--red)"
+    password.style.opacity = "0.7"
+    passwordUnderInput.textContent = "Password cannot be empty"
+    passwordunder.style.display = "flex"
+    passwordUnderInput.style.color = "var(--red)"
+    passwordUnderInput.style.fontSize = "12px"
+    passwordUnderInput.style.opacity = "0.8"
+    passwordunder.style.padding = "4px 0 20px 0px"
+    password.style.margin = "0 0 0px 0px"
+    passwordunder.style.justifyContent = "right"
+    passwordunder.style.width = "100%"
+    password.placeholder = ''
   } else {
     password.classList.remove('error');
+    password.placeholder = ''
   }
 });
 
