@@ -9,10 +9,10 @@ const firstNameUnderInput = document.querySelector('.firstName + .under .underIn
 const lastNameUnderInput = document.querySelector('.lastName + .under .underInput')
 const emailUnderInput = document.querySelector('.email + .under .underInput')
 const passwordUnderInput = document.querySelector('.password + .under .underInput')
-const under = document.querySelector('.under')
-const lasdtunder = document.querySelector('.under')
+const emailunder = document.querySelector('.email + .under')
+const lastNameunder = document.querySelector('.lastName + .under')
 const firstNameunder = document.querySelector('.firstName + .under')
-const under = document.querySelector('.under')
+const passwordunder = document.querySelector('.password + .under')
 const under = document.querySelector('.under')
 
 console.log(firstName);
