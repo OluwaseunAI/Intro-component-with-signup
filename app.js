@@ -118,6 +118,7 @@ form.addEventListener('submit', (e) => {
     passwordunder.style.width = "100%"
     password.placeholder = ''
     showPassword.src = './images/exclamation-circle-solid.svg';
+    showPassword.style.bottom = "3.5rem"
 
   } else {
     password.classList.remove('error');
