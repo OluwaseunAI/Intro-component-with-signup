@@ -27,25 +27,48 @@
           invaluable.
         </p>
       </div>
+      <!-- <label for="firstName">
+        <input type="text" class="firstName" placeholder="First Name" />
+        <div class="under">
+          <i>
+            <span>
+              <h5 class="underInput"></h5>
+            </span>
+          </i>
+        </div>
+        <div class="error-icon">
+          <img src="" alt="Error icon">
+        </div>
+      </label> -->
       <div class="container-form">
         <h4>Try it free 7 days<span> then $20/mo. thereafter</span></h4>
         <form action="" id="form">
-          <label for="firstName">
-            <input type="text" class="firstName" placeholder="First Name" />
+          <div class="wrap">
+            <label for="firstName">
+              <input type="text" class="firstName" placeholder="First Name" />
             <div class="under"><i><span><h5 class="underInput"></h5></span></i></div>
-          </label>
+            <div class="warning-icon"><img src="./images/exclamation-circle-solid.svg" alt="warningIcon" class="fWarning"></div>
+            </label>
+          </div>
+
           <label for="lastName">
             <input type="text" class="lastName" placeholder="Last Name" />
             <div class="under"><i><span><h5 class="underInput"></h5></span></i></div>
+            <div class="warning-icon"><img src="./images/exclamation-circle-solid.svg" alt="warningIcon" class="lWarning"></div>
           </label>
+
           <label for="email">
             <input type="email" class="email" placeholder="Email" />
-            <div class="under"><i><span><h5 class="underInput"></h5></span></i></div>
+             <div class="under"><i><span><h5 class="underInput"></h5></span></i></div>
+            <div class="warning-icon"><img src="./images/exclamation-circle-solid.svg" alt="warningIcon" class="eWarning"></div>
           </label>
+
           <label for="password">
             <input type="password" class="password" placeholder="Password" />
             <div class="under"><i><span><h5 class="underInput"></h5></span></i></div>
+            <div class="warning-icon"><img src="./images/eye-slash-solid.svg" alt="showPassword" class="showPassword"></div>
           </label>
+
           <button id="button">Claim your free trial</button>
           <small
             >By clicking the button, you are agreeing to our

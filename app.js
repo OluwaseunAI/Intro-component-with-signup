@@ -5,17 +5,19 @@ const lastName = document.querySelector('.lastName');
 const email = document.querySelector('.email');
 const password = document.querySelector('.password');
 const underInput = document.querySelector('.underInput')
-const firstNameUnderInput = document.querySelector('.firstName + .under .underInput')
-const lastNameUnderInput = document.querySelector('.lastName + .under .underInput')
+const firstNameUnderInput = document.querySelector('.firstName ~ .under .underInput')
+const lastNameUnderInput = document.querySelector('.lastName ~ .under .underInput')
 const emailUnderInput = document.querySelector('.email + .under .underInput')
-const passwordUnderInput = document.querySelector('.password + .under .underInput')
-const emailunder = document.querySelector('.email + .under')
-const lastNameunder = document.querySelector('.lastName + .under')
-const firstNameunder = document.querySelector('.firstName + .under')
-const passwordunder = document.querySelector('.password + .under')
+const passwordUnderInput = document.querySelector('.password ~ .under .underInput')
+const emailunder = document.querySelector('.email ~ .under')
+const lastNameunder = document.querySelector('.lastName ~ .under')
+const firstNameunder = document.querySelector('.firstName ~ .under')
+const passwordunder = document.querySelector('.password ~ .under')
 const under = document.querySelector('.under')
+const firstNameErrorIcon = document.querySelector('.firstName ~ .warning-icon img');
+const fWarning = document.querySelector('.fWarning')
 
-console.log(firstName);
+// console.log(firstName);
 
 // console.log(firstName, lastName, email, password);
 
@@ -42,6 +44,7 @@ form.addEventListener('submit', (e) => {
     firstNameunder.style.justifyContent = "right"
     firstNameunder.style.width = "100%"
     firstName.placeholder = ''
+    fWarning.style.display = 'block';
 
   } else {
     firstName.classList.remove('error');
@@ -118,3 +121,15 @@ function validateEmail(email) {
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(String(email).toLowerCase());
 }
+
+const showPassword = document.querySelector('.showPassword')
+
+hidePassword.addEventListener('click', ()=>{
+  if(password.type === "password"){
+    password.type = "text";
+    showPassword.src= "./images/eye-solid.svg"
+  }else{
+    password.type = 'password';
+    showPassword = "./images/eye-slash-solid.svg"
+  }
+});

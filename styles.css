@@ -194,3 +194,24 @@ small span {
     transition: all 0.2s ease-in-out;
   }
 }
+
+.wrap {
+  position: relative;
+}
+.fWarning, .lWarning, .eWarning, .pWarning{
+  display: none;
+}
+
+.showPassword{
+  cursor: pointer !important;
+}
+
+.warning-icon img{
+  width: 30%;
+  position: absolute;
+  right: 1.2rem;
+  bottom: 3rem;
+  /* color: var(--red); */
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+}
