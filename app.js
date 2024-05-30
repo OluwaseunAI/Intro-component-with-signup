@@ -14,7 +14,13 @@ const lastNameunder = document.querySelector('.lastName ~ .under')
 const firstNameunder = document.querySelector('.firstName ~ .under')
 const passwordunder = document.querySelector('.password ~ .under')
 const under = document.querySelector('.under')
-const firstNameErrorIcon = document.querySelector('.firstName ~ .warning-icon img');
+const firstNameErrorIcon = document.querySelector('.firstName + fWarning');
+const lWarning = document.querySelector('.lWarning')
+const lastNameErrorIcon = document.querySelector('.lastName + lWarning');
+const eWarning = document.querySelector('.eWarning')
+const emailErrorIcon = document.querySelector('.email + eWarning');
+const pWarning = document.querySelector('.pWarning')
+const passwordErrorIcon = document.querySelector('.password + pWarning');
 const fWarning = document.querySelector('.fWarning')
 
 // console.log(firstName);
@@ -65,6 +71,7 @@ form.addEventListener('submit', (e) => {
     lastNameunder.style.justifyContent = "right"
     lastNameunder.style.width = "100%"
     lastName.placeholder = ''
+    lWarning.style.display = 'block';
   } else {
     lastName.classList.remove('error');
   }
@@ -84,6 +91,7 @@ form.addEventListener('submit', (e) => {
     emailunder.style.justifyContent = "right"
     emailunder.style.width = "100%"
     email.placeholder = 'email@example/com'
+    eWarning.style.display = 'block';
 
       email.style.setProperty( "--placeholder-color", "var(--red)");
       console.log(email.getAttribute("placeholder") )
@@ -109,6 +117,8 @@ form.addEventListener('submit', (e) => {
     passwordunder.style.justifyContent = "right"
     passwordunder.style.width = "100%"
     password.placeholder = ''
+    showPassword.src = './images/exclamation-circle-solid.svg';
+
   } else {
     password.classList.remove('error');
     password.placeholder = ''
@@ -124,12 +134,15 @@ function validateEmail(email) {
 
 const showPassword = document.querySelector('.showPassword')
 
-hidePassword.addEventListener('click', ()=>{
+let isPasswordVisible = false
+
+showPassword.addEventListener('click', ()=>{
   if(password.type === "password"){
+
     password.type = "text";
     showPassword.src= "./images/eye-solid.svg"
-  }else{
+  }else {
     password.type = 'password';
-    showPassword = "./images/eye-slash-solid.svg"
+    showPassword.src = "./images/eye-slash-solid.svg"
   }
 });
